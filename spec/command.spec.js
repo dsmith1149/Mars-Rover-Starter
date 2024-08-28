@@ -12,6 +12,5 @@ describe("Command class", function() {
   })
 
   it("throw error if constructor does NOT set a value passed in as the 2nd argument", function(){
-    
   })
 });

@@ -1,15 +1,12 @@
 class Message {
    constructor(name, commands){
       this.name = name;
-      if (typeof name !== 'string') {
-         throw Error('Name must be a string');
+      if (!name) {
+         throw new Error('Name required.');
       }
-      this.commands = commands;
-      if (!Array.isArray(commands)) {
-         throw Error('Commands must be an array of Command objects');
-     }
+      this.commands = commands || [];
+   }
    
- 
 }
-}
+
 module.exports = Message;
